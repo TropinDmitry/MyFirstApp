@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_home"
+        android:icon="@drawable/courses_icon"
+        android:title="Dictionary" />
+    <item
+        android:id="@+id/navigation_dashboard"
+        android:icon="@drawable/training_icon"
+        android:title="Training" />
+    <item
+        android:id="@+id/navigation_notifications"
+        android:icon="@drawable/video_icon"
+        android:title="Video" />
+
+</menu>
