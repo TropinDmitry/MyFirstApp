@@ -25,12 +25,12 @@ class VideoFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+
         // Inflate the layout for this fragment
         _binding = FragmentVideoBinding.inflate(inflater, container, false)
         val root: View = binding.root
         binding.webview.webViewClient = MyWebClient()
-        binding.webview.loadUrl("https://learnenglish.britishcouncil.org/general-english/video-zone/")
-
+        binding.webview.loadUrl("https://learnenglish.britishcouncil.org/general-english/video-zone")
         return root
     }
 }

@@ -50,7 +50,7 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         val view = binding.root
         setContentView(view)
-
+        supportActionBar?.hide()
         tabLayout = findViewById(R.id.tab_indicator)
 
         next = findViewById(R.id.next)
