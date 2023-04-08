@@ -29,14 +29,20 @@ class VideoFragment : Fragment() {
         // Inflate the layout for this fragment
         _binding = FragmentVideoBinding.inflate(inflater, container, false)
         val root: View = binding.root
-        binding.webview.webViewClient = MyWebClient()
-        binding.webview.loadUrl("https://learnenglish.britishcouncil.org/general-english/video-zone")
+        binding.webView.webViewClient = MyWebClient()
+        binding.webView.loadUrl("https://learnenglish.britishcouncil.org/general-english/video-zone")
         return root
     }
 }
 
 class MyWebClient: WebViewClient() {
     override fun shouldOverrideUrlLoading(view: WebView?, request: WebResourceRequest?): Boolean {
+        val URL = request?.url.toString()
+        val trueURL = "https://learnenglish.britishcouncil.org/"
+
+        if(URL.contains(trueURL)) {
+            return false
+        }
         return true
     }
 }
